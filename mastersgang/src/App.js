@@ -9,6 +9,7 @@ import ProfilePage from './pages/ProfilePage';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ClassesDetails from './pages/ClassesDetails';
 
 const ProtectedRoute = ({ children }) => {
   const { auth, login } = useAuth();
@@ -74,6 +75,15 @@ const App = () => {
             element={
               <ProtectedRoute>
                 <ProfilePage />
+              </ProtectedRoute>
+            }
+          />
+
+<Route
+            path="/classes/:classid"
+            element={
+              <ProtectedRoute>
+                <ClassesDetails />
               </ProtectedRoute>
             }
           />
