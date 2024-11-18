@@ -166,6 +166,8 @@ router.get('/checklogin', authTokenHandler, async (req, res, next) => {
 
 router.get('/getuser', authTokenHandler, async (req, res, next) => {
 
+    
+
     try {
         const user = await User.findById(req.userId).select('-password');
 
