@@ -90,7 +90,7 @@ return (
       <h1>Signup</h1>
       <form onSubmit={handleSubmit}>
           <input
-              type="text"
+              type="text" 
               placeholder="Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
